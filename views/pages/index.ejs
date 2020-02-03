@@ -1,0 +1,61 @@
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+    <h1 style="text-align: center;color: orange;"><u>Job Portal</u></h1>
+    <div class="table-responsive">
+        <table class="table-bordered ">
+            <thead>
+                <th>Id</th>
+                <th>Type</th>
+                <th>Url</th>
+                <th>Ceated_at</th>
+                <th>Company</th>
+                <th>Company_url</th>
+                <th>Location</th>
+                <th>Title</th>
+                <!-- <th>Description</th> -->
+                <th>how_to_apply</th>
+                <th>company_logo</th>
+            </thead>
+            <tbody>
+                
+                <% users.forEach(function(user){ %>
+                    <tr>
+                    
+                        <td><%= user.id %></td>
+                        <td><%= user.type %></td>
+                        <td><%= user.url %></td>
+                        <td><%= user.created_at %></td>
+                        <td><%= user.company %></td>
+                        <td><%= user.company_url %></td>
+                        <td><%= user.location %></td>
+                        <td><%= user.title %></td>
+                        <!-- <td><%= user.description %></td> -->
+                        <td><%= user.how_to_apply %></td>
+                        <td><%= user.company_logo %></td>
+                    </tr>
+                <% })%>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+<style>
+    .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+        border-bottom-width: 2px;
+        text-align: center;
+    }
+    td, th {
+        padding: 10px;
+    }
+</style>
+</html>
